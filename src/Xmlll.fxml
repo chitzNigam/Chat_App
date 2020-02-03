@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="547.0" prefWidth="475.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <SplitPane dividerPositions="0.6496062992125984" focusTraversable="true" layoutX="8.0" layoutY="23.0" orientation="VERTICAL" prefHeight="510.0" prefWidth="457.0">
+      <items>
+        <AnchorPane id="nivgv" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <TextField alignment="CENTER_LEFT" blendMode="BLUE" layoutX="128.0" layoutY="77.0" opacity="1.0" prefWidth="200.0" />
+            <Button layoutX="328.0" layoutY="79.0" mnemonicParsing="false" text="Button" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
