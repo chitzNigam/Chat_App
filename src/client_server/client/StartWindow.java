@@ -1,7 +1,4 @@
-package peer_to_peer;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+package client_server.client;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -48,7 +45,7 @@ public class StartWindow extends Application {
     	
         primaryStage.setTitle("Chat Application");
         Button btn = new Button();
-        Label l = new Label("Enter the IP address of your friend");
+        Label l = new Label("Enter the IP address of Server");
         Label ipl = new Label("");
         TextField tf = new TextField("0");
         btn.setText("OK");
@@ -71,12 +68,7 @@ public class StartWindow extends Application {
         gridPane.add(tf,0, 1);
         gridPane.add(btn, 0, 2);
         gridPane.add(ipl, 0, 3);
-        try {
-			ipl.setText("Your IP address is :"+InetAddress.getLocalHost().getHostAddress());
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        
         primaryStage.setScene(new Scene(gridPane, 300,300));
         primaryStage.setResizable(false);
         primaryStage.show();
