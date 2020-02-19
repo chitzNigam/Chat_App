@@ -37,7 +37,7 @@ public class StartWindow extends Application {
     	GridPane gridPane = new GridPane();
  
         gridPane.setAlignment(Pos.CENTER);
-        gridPane.setPadding(new Insets(200, 00, 200, 200));
+        gridPane.setPadding(new Insets(200, 00, 200, 200));                                             
         
         gridPane.setHgap(10);
         gridPane.setVgap(10);
@@ -46,25 +46,25 @@ public class StartWindow extends Application {
         columnOneConstraints.setHalignment(HPos.CENTER);
 
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
-        columnTwoConstrains.setHgrow(Priority.ALWAYS);
+        columnTwoConstrains.setHgrow(Priority.ALWAYS);                                                                                  //Initial UI
 
         gridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
     	
         primaryStage.setTitle("Chat Application");
         Button btn = new Button();
-        Label l = new Label("Enter the IP address of your friend");
+        Label l = new Label("Enter the IP address of your friend");                                                                       // IP for connection
         Label ipl = new Label("");
         TextField tf = new TextField("0");
         btn.setText("OK");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+        btn.setOnAction(new EventHandler<ActionEvent>() {                                                                   // Button actions after IP
  
             @Override
-            public void handle(ActionEvent event) {
+            public void handle(ActionEvent event) {                                                                         
                 System.out.println(tf.getText());
                 btn.setVisible(false);
                 tf.setVisible(false);
                 ipl.setVisible(false);
-                new TryingConnection(tf.getText()).func(primaryStage,gridPane,l,btn);
+                new TryingConnection(tf.getText()).func(primaryStage,gridPane,l,btn);                                   // Creating peer connection to the other person
             }
         });
         GridPane.setHalignment(btn, HPos.CENTER);
