@@ -81,11 +81,11 @@ class Client {
 		//System.out.println(primaryStage.getScene().getRoot().getChildrenUnmodifiable().toString());
 		GridPane gp = (GridPane)primaryStage.getScene().getRoot();
 		label = (Label)gp.getChildren().get(0);
-		label.setText("yesss");
+		label.setText("Test");
 		ta = (TextField)gp.getChildren().get(1);
 		ta.setVisible(true);
 		button = (Button)gp.getChildren().get(2);
-		button.setText("Send");
+		button.setText("Send Message");
 		button.setVisible(true);
 		button.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -93,7 +93,6 @@ class Client {
 				runClient();
 			}
 		});
-		//s= server;
 		c= client;
 		Thread tw = new Thread(new Runnable() {
 			@Override
