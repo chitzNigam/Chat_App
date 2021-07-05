@@ -1,3 +1,6 @@
+//Peer.java file
+
+
 package peer_to_peer;
 
 import java.net.*;
@@ -25,6 +28,7 @@ class Peer {
 	private volatile String str;
 	
 	private void runServer() {
+		//Thread declaration
 		Thread server = new Thread(new Runnable() {
 			
 			@Override
@@ -36,6 +40,7 @@ class Peer {
 		                new InputStreamReader( 
 		                    s.getInputStream()));
 					str="err";
+					//Run loop until return carriage or empty string is given as input
 					while(true) {
 						try {
 							while ((str = br.readLine()) != null) { 
@@ -65,9 +70,13 @@ class Peer {
 
 			}
 		});
+
+		//Start thread
 		server.start();
 	}
 	
+
+	//Method to read text from input and send it to the print stream
 	private void runClient() {
 		String str2 = ta.getText();
 		System.out.println(str2);
